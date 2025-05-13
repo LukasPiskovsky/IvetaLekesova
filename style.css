@@ -423,9 +423,10 @@ input, textarea{
     border: none;
     outline:none;
     width:200px;
-    padding:10px;
+    padding:12px;
     font-size: 1rem;
-    color:var(--subwhite-color)
+    color:var(--subwhite-color);
+    transition: all .5s ease;
 }
 
 textarea{
@@ -433,7 +434,16 @@ textarea{
 }
 
 input::placeholder, textarea::placeholder{
-    color: #ccc;
+    color: #999;
+    transition: all .5s ease;
+}
+
+input:focus{
+    background-color: var(--main-color);
+}
+
+input:focus::placeholder{
+    transform: translate(-100px);
 }
 
 input[type="submit"]{
