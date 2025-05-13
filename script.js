@@ -293,14 +293,14 @@ function resetServiceDivs(){
 function animateForm(){
     anime({
         targets:formHeading,
-        translateY: [112, 0],
+        translateY: [119, 0],
         easing: 'easeOutExpo',
         delay:1000,
         duration: 2600
     })
     anime({
         targets:formBtn,
-        translateY: [-112, 0],
+        translateY: [-119, 0],
         easing: 'easeOutExpo',
         delay:1000,
         duration: 2600
