@@ -530,7 +530,7 @@ input[type="submit"]{
     .services::before {
         content: "";
         position: absolute;
-        right: 50%;
+        right: 50.2%;
         bottom: 40%;
         width: 50%;
         height:10px;
