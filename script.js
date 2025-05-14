@@ -351,5 +351,5 @@ ScrollReveal().reveal(".header-arrows", {delay: webSpeed, reset: false})
 ScrollReveal().reveal(".insurance", {delay: webSpeed, reset: false})
 ScrollReveal().reveal(".csob", {delay: webSpeed * 1.5, reset: false})
 ScrollReveal().reveal(".certificate-container-arrows", {delay: webSpeed * 2, reset: false})
-ScrollReveal().reveal(".form-show", {delay: webSpeed * 2, reset: false})
+ScrollReveal().reveal(".form-show", {delay: webSpeed * 2, reset: true})
 
