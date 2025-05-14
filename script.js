@@ -176,7 +176,9 @@ headerArrows.addEventListener("click", () => {
 
 certificateArrows.addEventListener("click", () => {
         sections[1].scrollIntoView({behavior:"smooth"})
+        if(window.innerWidth > 1015){
         AnimateServiceDivs()
+        }
 })
 servicesArrows.addEventListener("click", () => {
         sections[2].scrollIntoView({behavior:"smooth"})
@@ -214,13 +216,13 @@ insurencyTypeBtn.forEach((elem, index) =>{
 
     "Úrazové a nemocenské pojištění zajišťuje finanční podporu při úrazu, dlouhodobé nemoci nebo pracovní neschopnosti. Pomáhá vám pokrýt výpadek příjmu i zvýšené výdaje během léčby."]
 
-    let pContentLi = ["<ul><li>Škody na stavbě (např. střecha, okna, zdi)</li><li>Poškození nebo zničení domácího vybavení</li><li>Odpovědnost za škodu způsobenou sousedům (např. vytopení)</li></ul",
+    let pContentLi = ["<ul><li>Škody na stavbě (např. střecha, okna, zdi)</li><li>Poškození nebo zničení domácího vybavení</li><li>Odpovědnost za škodu způsobenou sousedům (např. vytopení)</li></ul>",
     
-    "<ul><li>Finanční zajištění rodiny při nečekaných životních událostech</li><li>Možnost připojištění (např. invalidity, hospitalizace,apod.)</li><li>Daňové výhody možnost odečtu z daní</li><li>Možnost spoření nebo investování na stáří či pro děti</li></ul",
+    "<ul><li>Finanční zajištění rodiny při nečekaných životních událostech</li><li>Možnost připojištění (např. invalidity, hospitalizace,apod.)</li><li>Daňové výhody možnost odečtu z daní</li><li>Možnost spoření nebo investování na stáří či pro děti</li></ul>",
 
-    "<ul><li>Léčebné výlohy v zahraničí</li><li>Asistenční služby 24/7</li><li>Pojištění zavazadel a odpovědnosti</li><li>Pojištění storna zájezdu nebo zpoždění letu</li></ul",
+    "<ul><li>Léčebné výlohy v zahraničí</li><li>Asistenční služby 24/7</li><li>Pojištění zavazadel a odpovědnosti</li><li>Pojištění storna zájezdu nebo zpoždění letu</li></ul>",
 
-    "<ul><li>Trvalé následky úrazu</li><li>Denní odškodné za dobu léčení</li><li>Invaliditu nebo smrt následkem úrazu</li><li>Pracovní neschopnost z důvodu nemoci</li></ul",
+    "<ul><li>Trvalé následky úrazu</li><li>Denní odškodné za dobu léčení</li><li>Invaliditu nebo smrt následkem úrazu</li><li>Pracovní neschopnost z důvodu nemoci</li></ul>",
     ]
 
     elem.addEventListener("click", () =>{
