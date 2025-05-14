@@ -6,8 +6,8 @@
 }
 
 :root{
-    --main-color:#0e1c22e3;
-    --bg-color:#0e2221e3;
+    --main-color:#11232be3;
+    --bg-color:#153533e3;
     --subwhite-color:#fff3f3;
     --white-color:#fff;
     --section-color:linear-gradient(var(--bg-color), var(--main-color));
@@ -410,7 +410,7 @@ form{
     gap:10px;
 }
 form h3{
-    color: #699aac;
+    color: #87bfd3;
     padding:15px;
     width:70%;
     background-color: var(--main-color);
@@ -438,12 +438,12 @@ input::placeholder, textarea::placeholder{
     transition: all .5s ease;
 }
 
-input:focus{
+input:focus, textarea:focus{
     background-color: var(--main-color);
 }
 
-input:focus::placeholder{
-    transform: translate(-100px);
+input:focus::placeholder, textarea:focus::placeholder{
+    transform: translate(-140px);
 }
 
 input[type="submit"]{
@@ -451,6 +451,14 @@ input[type="submit"]{
     cursor: pointer;
     width:70%;
     border-radius: 0 0 20px 20px;
+    color:#8cd4bf; ;
+    font-weight: bold;
+    transition: all 0.5s ease-out;
+}
+
+input[type="submit"]:hover{
+    background-color: var(--main-color);
+    color: #87bfd3;
 }
 
 /**big screen - animates**/
@@ -534,7 +542,7 @@ input[type="submit"]{
         bottom: 40%;
         width: 50%;
         height:10px;
-        background: linear-gradient(var(--bg-color), var(--main-color) 90%);
+        background: linear-gradient(90deg,var(--main-color) 10%, var(--bg-color));
         opacity: 0.5;
         border-radius: 0 0 0 0;
         z-index: 0;
