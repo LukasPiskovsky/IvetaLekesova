@@ -159,6 +159,7 @@ window.addEventListener("wheel", (e) => {
         isScrolling = false;
     }, webSpeed);
 });
+
 window.addEventListener("resize", () => {
     if (window.innerWidth > 1016) {
         const rect = services.getBoundingClientRect();
@@ -244,11 +245,13 @@ insurencyTypeBtn.forEach((elem, index) =>{
     })
 })
 
+
 insuranceImg.addEventListener("click", () =>{
     insuranceImg.classList.toggle("insurance-click")
     csobImg.classList.remove("csob-click")
     setTimeout(() => {
         insuranceImg.classList.contains("insurance-click") ? certificateContainer.classList.add("certificate-blurred") : certificateContainer.classList.remove("certificate-blurred")
+        
     },100)
 })
 csobImg.addEventListener("click", () =>{
@@ -257,8 +260,23 @@ csobImg.addEventListener("click", () =>{
     setTimeout(() => {
         csobImg.classList.contains("csob-click") ? certificateContainer.classList.add("certificate-blurred") : certificateContainer.classList.remove("certificate-blurred")
     },300)
-
 })
+
+window.addEventListener("click", (e) =>{
+      if (!csobImg.contains(e.target) && !insuranceImg.contains(e.target)) {
+    
+        insuranceImg.classList.remove("insurance-click")
+        csobImg.classList.remove("csob-click")
+        certificateContainer.classList.remove("certificate-blurred")
+      }
+})
+
+
+
+
+
+
+
 
 //animation//////////////////////////////////////////////////////////
 
