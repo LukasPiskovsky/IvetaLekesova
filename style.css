@@ -565,6 +565,11 @@ input[type="submit"]:hover{
     .insurency-type{
         translate: 2000px 0px;
     }
+
+    .insurency-buttons{
+        display: flex;
+        gap:5px;
+    }
 }
 
 

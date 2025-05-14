@@ -12,6 +12,8 @@ const main = document.querySelector("main")
 const logo = document.querySelector(".logo")
 const insurencyType = document.querySelectorAll(".insurency-type")
 const insurencyTypeBtn = document.querySelectorAll(".insurency-type-button")
+const insurencyInteresteBtn = document.querySelectorAll(".interest")
+const insurencyTypeBtns = document.querySelectorAll(".insurency-buttons")
 const insurencyTypeHeading = document.querySelectorAll(".insurency-type-h3")
 const insurencyTypeImg = document.querySelectorAll(".insurency-type-image")
 const insurencyTypeP = document.querySelectorAll(".insurency-type-p")
@@ -28,6 +30,7 @@ const insuranceDiv = document.getElementById("insurance-div")
 const certificateContainer = document.querySelector(".cerificate-container")
 const formHeading = document.getElementById("form-heading")
 const formBtn = document.getElementById("form-button")
+const messageInput = document.getElementById("message")
 
 
 //behvaior////////////////////////////////////////////////////////////
@@ -209,19 +212,21 @@ logo.addEventListener("click", () => {
 
 insurencyTypeBtn.forEach((elem, index) =>{
     let rotate= [180, 180, 180, 180]
-    let pContentText =["Pojištění nemovitosti chrání váš dům nebo byt před škodami způsobenými živly, požárem, povodní, vandalismem nebo krádeží. Můžete si také pojistit vybavení domácnosti od nábytku po elektroniku.", 
-
+    let pContentText =[
     "Nástroj pro zajištění finanční stability vaší rodiny v nepředvídatelných životních situacích. Chrání vás i vaše nejbližší v případě úrazu, vážného onemocnění nebo úmrtí. Kromě základního krytí může životní pojištění sloužit také jako forma spoření či investice pro budoucnost.",
+        
+    "Pojištění nemovitosti chrání váš dům nebo byt před škodami způsobenými živly, požárem, povodní, vandalismem nebo krádeží. Můžete si také pojistit vybavení domácnosti od nábytku po elektroniku.", 
 
-    "Ať už vyrážíte na dovolenou, pracovní cestu nebo krátký výlet, cestovní pojištění vás chrání před nečekanými výdaji v zahraničí. Pokrývá zdravotní péči, ztrátu zavazadel nebo storno cesty.",
+    "Chraňte své vozidlo před neočekávanými událostmi. Naše pojištění auta vám poskytne jistotu v případě nehody, krádeže, poškození přírodním živlem nebo vandalismem. Nabízíme široké možnosti připojištění, asistenční služby 24/7 a rychlé vyřízení pojistné události.",
 
     "Úrazové a nemocenské pojištění zajišťuje finanční podporu při úrazu, dlouhodobé nemoci nebo pracovní neschopnosti. Pomáhá vám pokrýt výpadek příjmu i zvýšené výdaje během léčby."]
 
-    let pContentLi = ["<ul><li>Škody na stavbě (např. střecha, okna, zdi)</li><li>Poškození nebo zničení domácího vybavení</li><li>Odpovědnost za škodu způsobenou sousedům (např. vytopení)</li></ul>",
-    
+    let pContentLi = [    
     "<ul><li>Finanční zajištění rodiny při nečekaných životních událostech</li><li>Možnost připojištění (např. invalidity, hospitalizace,apod.)</li><li>Daňové výhody možnost odečtu z daní</li><li>Možnost spoření nebo investování na stáří či pro děti</li></ul>",
 
-    "<ul><li>Léčebné výlohy v zahraničí</li><li>Asistenční služby 24/7</li><li>Pojištění zavazadel a odpovědnosti</li><li>Pojištění storna zájezdu nebo zpoždění letu</li></ul>",
+    "<ul><li>Škody na stavbě (např. střecha, okna, zdi)</li><li>Poškození nebo zničení domácího vybavení</li><li>Odpovědnost za škodu způsobenou sousedům (např. vytopení)</li></ul>",
+
+    "<ul><li>Krytí škod na vašem i cizím vozidle</li><li>Asistence v ČR i zahraničí</li><li>Možnost náhradního vozidla</li><li>Flexibilní volba spoluúčasti a rozsahu pojištění</li></ul>",
 
     "<ul><li>Trvalé následky úrazu</li><li>Denní odškodné za dobu léčení</li><li>Invaliditu nebo smrt následkem úrazu</li><li>Pracovní neschopnost z důvodu nemoci</li></ul>",
     ]
@@ -229,7 +234,7 @@ insurencyTypeBtn.forEach((elem, index) =>{
     elem.addEventListener("click", () =>{
 
         anime({
-            targets: [insurencyType[index], insurencyTypeHeading[index], insurencyTypeImg[index], insurencyTypeP[index], insurencyTypeBtn[index]],
+            targets: [insurencyType[index], insurencyTypeHeading[index], insurencyTypeImg[index], insurencyTypeP[index], insurencyTypeBtns[index]],
             rotateY: `${rotate[index]}deg`,
             duration: webSpeed * 3
         });
@@ -242,6 +247,15 @@ insurencyTypeBtn.forEach((elem, index) =>{
             elem.textContent = "Více";
             insurencyTypeP[index].innerHTML = pContentText[index]
 }
+    })
+})
+
+insurencyInteresteBtn.forEach((elem, index) =>{
+    labels = ["životní pojištění", "pojištění domu", "pojištění auta", "zdravotní a úrazové pojištění"]
+    elem.addEventListener("click", () =>{
+        contact.scrollIntoView({behavior:"smooth"})
+        animateForm()
+        messageInput.value = `Dobrý den, měl/a bych zájem o ${labels[index]} prosím kontaktujte mě.`
     })
 })
 
