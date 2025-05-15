@@ -12,7 +12,6 @@
     --white-color:#fff;
     --section-color:linear-gradient(var(--bg-color), var(--main-color));
     --box-color:#222;
-
 }
 
 html{
@@ -29,23 +28,6 @@ html.sr .load-hidden {
 }
 
 /**HEADER**/
-
-/* header{
-    background-image: url(img/1.jpg);
-    background-color: #332863;
-    background-size:50%;
-    background-position:right;
-    background-repeat: no-repeat;
-    background-blend-mode:exclusion;
-    width: 100%;
-    height: 50vh;
-}
-
-@media (max-width:1325px) {
-    header{
-            background-size:cover;
-    }
-} */
 
 header{
     position: relative;
@@ -142,7 +124,6 @@ main{
     background: var(--section-color);
 }
 
-
 section{
     height: 100vh;
     min-height: fit-content;
@@ -152,7 +133,6 @@ section{
     /* background: var(--section-color); */
     position: relative;
     z-index: 0;
-
 }
 
 .achievements h2, .services h2, .contact h2{
@@ -163,17 +143,6 @@ section{
     font-size: 3rem;
     color: var(--subwhite-color);
 }
-
-/* .achievements h2::after{
-    content: "";
-    position: absolute;
-    width:50px;
-    height:5px;
-    background-color: var(--main-color);
-    bottom:35px;
-    left:50%;
-    translate: -50% -50%;
-} */
 
 .cerificate-container{
     display: grid;
@@ -250,7 +219,6 @@ section{
 .csob img{
     border-radius: 0 20px 20px 0;
 }
-
 
 /**Services**/
 .services{
@@ -479,6 +447,16 @@ input[type="checkbox"].form-show{
     width:20px;
 }
 
+/**Footer**/
+footer{
+    text-align: center;
+    color:var(--subwhite-color);
+    background-color: var(--box-color);
+    padding:5px 0;
+}
+
+/**Queries**/
+
 /**big screen - animates**/
 @media (min-width:1016px){
 
@@ -585,15 +563,7 @@ input[type="checkbox"].form-show{
         gap:5px;
     }
 }
-
-footer{
-    text-align: center;
-    color:var(--subwhite-color);
-    background-color: var(--box-color);
-    padding:5px 0;
-}
-
-/**Queries**/
+/**Header tweek**/
 @media (max-width:1100px) {
     header{
         flex-direction: column-reverse;
@@ -622,7 +592,7 @@ footer{
     }
 
 }
-/**horizontal**/
+/**vertical**/
 @media (max-width:1015px){
 
     main{
@@ -632,26 +602,30 @@ footer{
         margin-bottom: -50%;
     }
 
+    .cerificate-container{
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr;
+        height: fit-content;
+    }
+
+    .cerificate-container h3{
+        margin-top: -80px;
+    }
 
     .certificate img{
         min-width:90vw;
         border-radius: 0px;
         scale:0.7;
-        translate: 0% -20%;
-
+        z-index: 3;
+        translate:6% -45%;
     }
 
     .csob{
         grid-column: 3/4 ;
         grid-row: 3/4;
-        translate: 0% -35%;
+        translate: 0% -30%;
         display: flex;
         flex-direction: column-reverse;
-    }
-
-    .csob div{
-        border-radius: 0px;
-        border-right: 4px solid var(--main-color);
     }
 
     .csob img{
@@ -664,9 +638,10 @@ footer{
         flex-direction: column-reverse;
     }
 
-    .insurance div{
+    .insurance div, .csob div{
         border-radius:0px;
-        border-left: 4px solid var(--main-color);
+        border-right: 30px solid var(--bg-color);
+        justify-content: center;
     }
 
     #insurance-div, #csob-div{
@@ -676,7 +651,7 @@ footer{
     .certificate-container-arrows{
         bottom:-0px;
         right:40%;
-        translate: -50% -305%;
+        translate: -110% -305%;
         rotate: 0deg;
     }
 
