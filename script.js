@@ -66,7 +66,6 @@ function reset(){
         header.scrollIntoView({behavior: "auto"});
     }, 10);
 
-    resetServiceDivs()
     ScrollReveal({ reset: true })
 }
 
@@ -311,32 +310,23 @@ function AnimateServiceDivs(){
 
         tl2.add({
             targets: elem,
-            translateX: "-2000px",
+            translateX: [2000, 0],
         });
     })
 }
 
-function resetServiceDivs(){
-    insurencyType.forEach((elem)=>{
-        anime({
-            targets:elem,
-            translateX: "0px",
-        }
-        )
-    })
-}
 
 function animateForm(){
     anime({
         targets:formHeading,
-        translateY: [119, 0],
+        translateY: [136, 0],
         easing: 'easeOutExpo',
         delay:1000,
         duration: 2600
     })
     anime({
         targets:formBtn,
-        translateY: [-119, 0],
+        translateY: [-136, 0],
         easing: 'easeOutExpo',
         delay:1000,
         duration: 2600
