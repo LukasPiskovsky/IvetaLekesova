@@ -461,6 +461,21 @@ input[type="submit"]:hover{
     color: #87bfd3;
 }
 
+label.form-show{
+    color: #999;
+    align-content: center;
+    display: block;
+    margin: 0 auto;
+}
+label.form-show a{
+    color:#8cd4bf;
+    text-decoration: none;
+    cursor: pointer;
+}
+input[type="checkbox"].form-show{
+    margin-left: -60px;
+}
+
 /**big screen - animates**/
 @media (min-width:1016px){
 

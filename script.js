@@ -28,10 +28,12 @@ const insurance = document.querySelector(".insurance")
 const insuranceImg = document.getElementById("insurance-img")
 const insuranceDiv = document.getElementById("insurance-div")
 const certificateContainer = document.querySelector(".cerificate-container")
+const form = document.querySelector("form")
 const formHeading = document.getElementById("form-heading")
 const formBtn = document.getElementById("form-button")
 const messageInput = document.getElementById("message")
 
+const agreement = document.getElementById("agreement")
 
 //behvaior////////////////////////////////////////////////////////////
 
@@ -352,4 +354,3 @@ ScrollReveal().reveal(".insurance", {delay: webSpeed, reset: false})
 ScrollReveal().reveal(".csob", {delay: webSpeed * 1.5, reset: false})
 ScrollReveal().reveal(".certificate-container-arrows", {delay: webSpeed * 2, reset: false})
 ScrollReveal().reveal(".form-show", {delay: webSpeed * 2, reset: true})
-
