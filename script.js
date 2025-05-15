@@ -193,22 +193,6 @@ logo.addEventListener("click", () => {
     reset()
     header.scrollIntoView({behavior: "smooth"})
 
-    // const rect = heading.getBoundingClientRect();
-    // const isVisible = rect.top < window.innerHeight && rect.bottom >= 0;
-    // if(!isVisible){
-    //     hasFormAnimated = false
-    //     setTimeout(() => {
-    //         ScrollReveal().clean(".form-show");
-    //         ScrollReveal().clean(".insurance");
-    //         ScrollReveal().clean(".csob");
-    //         ScrollReveal().clean(".certificate-container-arrows");
-    //         ScrollReveal().reveal(".form-show", {delay: webSpeed * 2, reset: false})
-    //         ScrollReveal().reveal(".insurance", {delay: webSpeed, reset: false})
-    //         ScrollReveal().reveal(".csob", {delay: webSpeed * 1.5, reset: false})
-    //         ScrollReveal().reveal(".certificate-container-arrows", {delay: webSpeed * 2, reset: false})
-    //     }, 300)
-    // }
-
 })
 
 insurencyTypeBtn.forEach((elem, index) =>{
@@ -254,7 +238,7 @@ insurencyTypeBtn.forEach((elem, index) =>{
 insurencyInteresteBtn.forEach((elem, index) =>{
     labels = ["životní pojištění", "pojištění domu", "pojištění auta", "zdravotní a úrazové pojištění"]
     elem.addEventListener("click", () =>{
-        contact.scrollIntoView({behavior:"smooth"})
+        form.scrollIntoView({behavior:"smooth"})
         animateForm()
         messageInput.value = `Dobrý den, měl/a bych zájem o ${labels[index]} prosím kontaktujte mě.`
     })
