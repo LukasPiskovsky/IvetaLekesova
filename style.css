@@ -572,6 +572,12 @@ input[type="submit"]:hover{
     }
 }
 
+footer{
+    text-align: center;
+    color:var(--subwhite-color);
+    background-color: var(--box-color);
+    padding:5px 0;
+}
 
 /**Queries**/
 @media (max-width:1100px) {
